@@ -1,0 +1,114 @@
+
+
+<!DOCTYPE html>
+<html>
+<style>
+h2{
+text-align:center;
+
+}
+#options{
+
+height:40%;
+width:100%;
+background-color:black;
+
+}
+#Pname{
+position:relative;
+
+}
+</style>
+
+<head>
+<script>
+function generateTextbox (){
+
+var retVal = prompt("Enter the Form name: ", "Form name here");
+var h=document.getElementById("Fname") ;
+h.innerHTML = retVal;
+}
+function Inputname(){
+var nam = prompt("Enter the Category","What");
+Pname.innerHTML = Pname.innerHTML +nam+"<input type='text' name='mytext' >"
+}
+function Inputpassword(){
+var nam = prompt("Enter the Category","What");
+Pname.innerHTML = Pname.innerHTML +nam+"<input type='password' name='mytext' >"
+
+}
+function Inputradio(){
+var nam = prompt("Enter the Category","What");
+radio.innerHTML = radio.innerHTML +nam+"<br><input type='radio' name='mytext' ></br>"
+
+}
+function Inputcheck(){
+var nam = prompt("Enter the Category","What");
+radio.innerHTML = radio.innerHTML +nam+"<br><input type='checkbox' name='mytext' ></br>"
+
+}
+function Inputnumber(){
+var nam = prompt("Enter the Category","What");
+number.innerHTML = number.innerHTML +nam+"<input type='number' name='mytext' >"
+
+}
+function Inputtarea(){
+var nam = prompt("Enter the Category","What");
+Tarea.innerHTML = Tarea.innerHTML +nam+"<textarea name='textarea' > </textarea>"
+
+}
+function Inputkeygen(){
+var nam = prompt("Enter the Category","What");
+Tarea.innerHTML = Tarea.innerHTML +nam+" <keygen name='security'>"
+
+}
+
+function upload(){
+var d = document.getElementById("text");
+var numtext = document.getElementById("numtxt").value;
+numtext = parseFloat(numtext);
+numtext = numtext + 1;
+d.innerHTML+="<input type='file' name='uploadFile"+numtext+"'><br>";	
+document.myform.numtxt.value = numtext;
+}
+
+</script>
+
+</head>
+<body style =" ">
+<div id= "options">
+
+<input type="button" onClick="generateTextbox()" value="Create Form"><br>
+<input type="hidden" name="numtxt" id="numtxt" value="1"> <br>
+<input id= "name" type="button" onClick="Inputname()" value="Get Name"> 
+<input id= "name" type="button" onClick="Inputpassword()" value="Get Password">
+<input id= "name" type="button" onClick="Inputradio()" value="Radio button"><br>
+<input id= "name" type="button" onClick="Inputcheck()" value="Check Box">
+<input id= "name" type="button" onClick="Inputnumber()" value="Number">
+<input id= "name" type="button" onClick="Inputtarea()" value="Text Area">
+<input id= "name" type="button" onClick="Inputkeygen()" value="Keygen">
+
+
+<div id="text">
+<input type="file" name="uploadFile1" id="uploadFile1" value="1"><br>
+</div>
+<input type="submit" name="submit" value="Upload">
+<input type="hidden" name="numtxt" id="numtxt" value="1"> 
+
+</div>
+<div id = "Pname" >
+</div>
+<h2 id="Fname" > </h2>
+
+<div id="radio">
+</div>
+<div id = "check">
+</div>
+
+<div id= "number">
+</div>
+<div id= "Tarea">
+</div>
+
+</body>
+</html> 
